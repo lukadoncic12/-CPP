@@ -4,7 +4,7 @@
 using namespace std;
 int fstr_count( string &str, string &fstr){
     int count_ = 0; //记录次数
-    int i = 0; //主字符串的循环便量
+    int i = 0; //主字符串的循环变量
     int j = 0; //待查字符串的循环变量
 
     //C++中，i，j必须分开定义，不能int i，j = 0； 会产生错误；
