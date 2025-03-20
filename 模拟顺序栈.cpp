@@ -10,21 +10,25 @@ typedef struct stack_demo{
     int top = -1;
 }stack_demo;
 
-void push(stack_demo &st, char ch){
+bool push(stack_demo &st, char ch){
     if(st.top == MAX_SIZE -1){
         cout << "栈已经满了" << endl;
+        return false;
     }else{
         st.top ++;
         st.arr[st.top] = ch;
+        return true;
     }
 }
 
-void pop(stack_demo &st, char &ch){
+bool pop(stack_demo &st, char &ch){
     if(st.top == -1){
         cout << "栈已经空了" << endl;
+        return false;
     }else{
         ch = st.arr[st.top];
         st.top--;
+        return true;
     }
 }
 
@@ -38,8 +42,10 @@ int main(){
 
     char result[5];
     for(int i = 0; i< 5; i++){
-        pop(stack_luka,result[i]);
+       if( pop(stack_luka,result[i])){   //如果成功弹出则输出
         cout << result[i] << endl;
+       }
+
     }
     return 0;
 }
