@@ -37,7 +37,7 @@ bool insert_char_in_file(string filename,int line_num, int pos, char ch){
 
     //在指定行指定位置插入字符
     string& target_line = Lines[line_num -1]; //引用，修改原对象
-    target_line.insert(pos,1,ch);
+    target_line.insert(pos,1,ch);  // 1 表示插入字符的重复次数，这里表示只插入一次
 
     //打开输出文件
     ofstream outfile(filename);
