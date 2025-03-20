@@ -13,7 +13,7 @@ int main(){
     while(true){
         cin >> num;
         if(num == 9999){
-            break;            //输入元素之间以任意空白字符分隔
+            break;            //输入元素之间以任意空白字符分隔，可以用回车
         }
         arr.push_back(num);
     }
@@ -30,7 +30,7 @@ int main(){
     do{
         cin >> num2;
         arr2.push_back(num2);
-    }while(getchar()!= '\n');   //输入的元素之间以空格分隔
+    }while(getchar()!= '\n');   //输入的元素之间只能以空格分隔，用回车就直接结束了
 
     for( int num : arr2){
         cout << num << endl;
