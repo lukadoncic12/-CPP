@@ -20,7 +20,7 @@ int main(){
         result.push_back(*it);
     }
 
-    cout << *set_a.end() << endl;   //end()迭代器中也有内容，所以上面for循环要++it，先处理后判断
+    cout << *set_a.end() << endl;   //end()迭代器中没有内容，它指向最后一个元素的后一位，起到一个“哨兵”的作用
 
 
     for(auto const& num : result){
